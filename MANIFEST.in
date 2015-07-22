@@ -1,0 +1,8 @@
+include *.txt
+include MANIFEST.in
+include setup.py
+include setup.cfg
+
+recursive-include src *.c *.h *.py
+recursive-include tests *.c *.h *.py
+recursive-include docs *.html *.css *.gif *.jpg *.txt

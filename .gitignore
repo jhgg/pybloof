@@ -1,0 +1,11 @@
+a.out
+*.a
+_pybloof.c
+*.o
+*.pyc
+*.so
+*.swp
+*egg-info
+build
+dist
+.idea
