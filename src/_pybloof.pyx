@@ -85,6 +85,9 @@ cdef class _BloomFilter:
         memcpy(cpython.PyLong_AsVoidPtr(address), byte_array.data.as_chars + header_size,
                byte_array.ob_size - header_size)
 
+    cpdef is_full(self):
+        return self._bitarray.all()
+
     @classmethod
     def from_byte_array(cls, array.array byte_array):
         assert byte_array.ob_size > header_size
