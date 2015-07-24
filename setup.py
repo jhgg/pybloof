@@ -22,7 +22,7 @@ ext_modules = [
 
 setup(
     name='pybloof',
-    version='0.4',
+    version='0.6',
     author='Jake Heinz',
     author_email='me@jh.gg',
     url="http://github.com/jhgg/pybloof",
@@ -33,5 +33,9 @@ setup(
     package_dir={'': 'src'},
     py_modules=['pybloof'],
     ext_modules=ext_modules,
-    test_suite='nose.collector'
+    test_suite='nose.collector',
+    install_requires=[
+        'Cython',
+        'bitarray'
+    ]
 )

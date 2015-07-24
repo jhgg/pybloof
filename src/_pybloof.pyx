@@ -88,6 +88,11 @@ cdef class _BloomFilter:
     cpdef is_full(self):
         return self._bitarray.all()
 
+    cpdef full_bits(self):
+        cdef float size = self._size
+        cdef float bits = self._bitarray.count()
+        return bits / size
+
     @classmethod
     def from_byte_array(cls, array.array byte_array):
         assert byte_array.ob_size > header_size

@@ -42,11 +42,15 @@ def test_long_pybloof():
     assert 2015 not in dmc_3
 
     assert dmc.size == dmc_3.size
+    assert dmc.full_bits() > 0.0
 
     dmc.clear()
 
     assert 1015 not in dmc
     assert dmc.size == 500
+
+    assert dmc.full_bits() == 0.0
+    assert not dmc.is_full()
 
 
 def test_extend():
