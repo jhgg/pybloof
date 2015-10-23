@@ -1,4 +1,4 @@
-# Pybloof
+# Pybloof [![PyPI version](https://badge.fury.io/py/pybloof.svg)](https://badge.fury.io/py/pybloof) [![Build Status](https://travis-ci.org/jhgg/pybloof.svg)](https://travis-ci.org/jhgg/pybloof)
 
 Pybloof is a simple Bloom Filter implementation using the murmur hash 3 as the hashing algorithm. It is inspired by
 work by https://github.com/crankycoder/hydra/ with some distinct differences. 
