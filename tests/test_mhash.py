@@ -4,7 +4,6 @@ import _pybloof
 def test__mhash3():
     h1 = _pybloof.hash('foo')
     h2 = _pybloof.hash('foo', h1 & 0xFFFFFFFF)
-    print h1, h2
     assert (-39287385592190013122878999397579195001,
             -73964642705803263641983394469427790275) == (h1, h2)
 

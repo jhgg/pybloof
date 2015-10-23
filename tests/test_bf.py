@@ -13,12 +13,12 @@ def test_pybloof():
 def test_long_pybloof():
     dmc = _pybloof.LongBloomFilter(500, 9)
 
-    dmc.add(1015L)
-    dmc.add(1015L)
+    dmc.add(1015)
+    dmc.add(1015)
 
     assert dmc.size == 500
 
-    assert 1015L in dmc
+    assert 1015 in dmc
     assert 1015 in dmc
     assert 2015 not in dmc
 
@@ -27,7 +27,7 @@ def test_long_pybloof():
     clone = dmc_2.to_byte_array().tostring().encode('hex')
     assert origin == clone
 
-    assert 1015L in dmc_2
+    assert 1015 in dmc_2
     assert 1015 in dmc_2
     assert 2015 not in dmc_2
 
@@ -37,7 +37,7 @@ def test_long_pybloof():
     base64 = dmc.to_base64()
     dmc_3 = _pybloof.LongBloomFilter.from_base64(base64)
 
-    assert 1015L in dmc_3
+    assert 1015 in dmc_3
     assert 1015 in dmc_3
     assert 2015 not in dmc_3
 
