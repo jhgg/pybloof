@@ -12,42 +12,42 @@ def test_string_bf():
     bloom_filter = _pybloof.StringBloomFilter
     member_generator =  lambda x: random_string(10)
 
-    # Calculated using http://hur.st/bloomfilter?n=20&p=0.1
     bf_est_elements=    20
+    FP_rate =           0.1
     bf_size=            96
     bf_hashes=          3
-    FP_rate =           0.1
 
     members_added_count = int(bf_est_elements*0.8)
     FP_rate_real = calculate_false_positive_rate(bloom_filter, member_generator, bf_size, bf_hashes, members_added_count)
+    print("False positive rate, aim: {}, real: {}".format(FP_rate, FP_rate_real))
     assert FP_rate >= FP_rate_real
 
 def test_long_bf():
     bloom_filter = _pybloof.LongBloomFilter
     member_generator =  lambda x: random.randint(-9223372036854775807, 9223372036854775807)
 
-    # Calculated using http://hur.st/bloomfilter?n=20&p=0.1
     bf_est_elements=    20
+    FP_rate =           0.1
     bf_size=            96
     bf_hashes=          3
-    FP_rate =           0.1
 
     members_added_count = int(bf_est_elements*0.8)
     FP_rate_real = calculate_false_positive_rate(bloom_filter, member_generator, bf_size, bf_hashes, members_added_count)
+    print("False positive rate, aim: {}, real: {}".format(FP_rate, FP_rate_real))
     assert FP_rate >= FP_rate_real
 
 def test_uint_bf():
     bloom_filter = _pybloof.UIntBloomFilter
     member_generator =  lambda x: random.randint(0, 4294967295)
 
-    # Calculated using http://hur.st/bloomfilter?n=20&p=0.1
     bf_est_elements=    20
+    FP_rate =           0.1
     bf_size=            96
     bf_hashes=          3
-    FP_rate =           0.1
 
     members_added_count = int(bf_est_elements*0.8)
     FP_rate_real = calculate_false_positive_rate(bloom_filter, member_generator, bf_size, bf_hashes, members_added_count)
+    print("False positive rate, aim: {}, real: {}".format(FP_rate, FP_rate_real))
     assert FP_rate >= FP_rate_real
 
 def calculate_false_positive_rate(bloom_filter, member_generator, bf_size, bf_hashes, members_added_count):
