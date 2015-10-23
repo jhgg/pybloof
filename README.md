@@ -146,6 +146,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
-
-In addition, code from https://github.com/crankycoder/hydra/ was used under the MIT license, for the bloom filter 
-calculations, the full license is inline with the included code.
