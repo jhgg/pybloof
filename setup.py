@@ -22,11 +22,19 @@ ext_modules = [
 
 setup(
     name='pybloof',
-    version='0.7',
+    version='0.7.1',
     author='Jake Heinz',
     author_email='me@jh.gg',
     url="http://github.com/jhgg/pybloof",
     description='A high performance python bloom filter thing.',
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'Topic :: Software Development :: Libraries',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'License :: OSI Approved :: MIT License',
+    ],
     license='MIT License',
     cmdclass={'build_ext': build_ext},
     zip_safe=False,
