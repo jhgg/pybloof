@@ -113,7 +113,7 @@ print filter.is_full()
 ```
 
 If that's happened, then you probably need a larger size. There are functions to do these calculations in `pybloof`
-to optimize your bloom filter sizes, see `pybloof.BloomCalculations`. 
+to optimize your bloom filter sizes, see `pybloof.bloom_calculator`. 
 
 #### Finally, you can clear your bloom filter using:
 
